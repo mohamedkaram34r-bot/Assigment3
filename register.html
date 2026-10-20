@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Register | My Blog</title>
+    <link rel="stylesheet" href="css/Stylesheet.css">
+    <script src="js/register.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header">
+        <a class="logo" href="index.html">My Blog</a>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="components.html">Components</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="register.html" aria-current="page">Register</a></li>
+                <li><a href="data.html">Data</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container registration-page" id="main" tabindex="-1">
+        <h1>Registration Form</h1>
+        <p>Complete all fields below.</p>
+        <p class="label" id="registration-note">
+            This is a practice form. It does not send or store your details or create an account.
+        </p>
+        <form class="card" id="registration-form" aria-describedby="registration-note" novalidate>
+            <div class="field">
+                <label for="name">Name *</label>
+                <input type="text" id="name" name="name" autocomplete="name" aria-describedby="name-error" required>
+                <small class="field-error" id="name-error" aria-live="polite"></small>
+            </div>
+            <div class="field">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" autocomplete="email" aria-describedby="email-error" required>
+                <small class="field-error" id="email-error" aria-live="polite"></small>
+            </div>
+            <div class="field">
+                <label for="password">Password *</label>
+                <input type="password" id="password" name="password" autocomplete="new-password" minlength="8" aria-describedby="password-error" required>
+                <small class="field-error" id="password-error" aria-live="polite"></small>
+            </div>
+            <div class="field">
+                <label for="confirm-password">Confirm password *</label>
+                <input type="password" id="confirm-password" name="confirm_password" autocomplete="new-password" aria-describedby="confirm-password-error" required>
+                <small class="field-error" id="confirm-password-error" aria-live="polite"></small>
+            </div>
+            <div class="field">
+                <label for="age">Age *</label>
+                <input type="number" id="age" name="age" min="1" max="120" step="1" aria-describedby="age-error" required>
+                <small class="field-error" id="age-error" aria-live="polite"></small>
+            </div>
+            <button class="btn" id="register-button" type="submit" disabled>Register</button>
+            <noscript><p>Enable JavaScript to use this registration form.</p></noscript>
+            <p class="alert" id="registration-status" role="status"></p>
+        </form>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">&copy; 2026 My Blog</div>
+    </footer>
+</body>
+</html>

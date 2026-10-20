@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact | My Blog</title>
+    <link rel="stylesheet" href="css/Stylesheet.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header>
+        <h1>My Blog</h1>
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="components.html">Components</a>
+            <a href="about.html">About</a>
+            <a href="contact.html" aria-current="page">Contact</a>
+            <a href="register.html">Register</a>
+            <a href="data.html">Data</a>
+        </nav>
+    </header>
+
+    <main class="contact-page" id="main" tabindex="-1">
+        <h2>Contact Us</h2>
+        <p>Complete the form below. Fields marked * are required.</p>
+        <p id="demo-note">This is a practice form. It does not send or store messages.</p>
+        <form id="contact-form" aria-describedby="demo-note">
+            <div class="field">
+                <label for="full-name">Full name *</label>
+                <input type="text" id="full-name" name="full_name" autocomplete="name" required>
+            </div>
+            <div class="field">
+                <label for="email">Email address *</label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" min="1" max="120" step="1">
+            </div>
+            <div class="field">
+                <label for="contact-date">Preferred contact date</label>
+                <input type="date" id="contact-date" name="contact_date">
+            </div>
+            <fieldset>
+                <legend>Your status (choose one)</legend>
+                <label class="option" for="student"><input type="radio" id="student" name="status" value="student"> Student</label>
+                <label class="option" for="employed"><input type="radio" id="employed" name="status" value="employed"> Employed</label>
+                <label class="option" for="other"><input type="radio" id="other" name="status" value="other"> Other</label>
+            </fieldset>
+            <fieldset>
+                <legend>Interests (choose any)</legend>
+                <label class="option" for="technology"><input type="checkbox" id="technology" name="interests" value="technology"> Technology</label>
+                <label class="option" for="sports"><input type="checkbox" id="sports" name="interests" value="sports"> Sports</label>
+                <label class="option" for="reading"><input type="checkbox" id="reading" name="interests" value="reading"> Reading</label>
+            </fieldset>
+            <div class="field">
+                <label for="subject">Subject *</label>
+                <select id="subject" name="subject" required>
+                    <option value="">Choose a subject</option>
+                    <option value="question">General question</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="support">Support</option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="message">Your message *</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+            <button class="btn" id="submit-button" type="submit" disabled>Check form</button>
+            <noscript><p>Enable JavaScript to check this practice form.</p></noscript>
+            <p class="alert" id="form-status" role="status"></p>
+        </form>
+    </main>
+    <script>
+        const form = document.getElementById("contact-form");
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+            document.getElementById("form-status").textContent =
+                "The required fields are valid. This practice form has not sent or stored your message.";
+        });
+        document.getElementById("submit-button").disabled = false;
+    </script>
+
+    <footer class="site-footer">
+        <div class="container">&copy; 2026 My Blog</div>
+    </footer>
+</body>
+</html>

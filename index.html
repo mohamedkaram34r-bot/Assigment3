@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Blog - Home</title>
+    <link rel="stylesheet" href="css/Stylesheet.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header">
+        <a class="logo" href="index.html">My Blog</a>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="components.html">Components</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="data.html">Data</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container" id="main" tabindex="-1">
+        <section class="hero">
+            <h1>Welcome to My Blog</h1>
+            <p>
+                This homepage uses Flexbox for the navigation and CSS Grid for the main
+                content. Resize the browser window to see one column on mobile, two on tablet,
+                and three on desktop.
+            </p>
+            <div class="actions">
+                <a class="btn" href="components.html">View Components</a>
+                <a class="btn btn-outline" href="about.html">Learn More</a>
+            </div>
+        </section>
+        <div class="grid">
+            <article class="card">
+                <h2>Learning HTML</h2>
+                <p>HTML is the foundation of every website and gives the page its structure.</p>
+            </article>
+            <article class="card">
+                <h2>Why CSS Matters</h2>
+                <p>CSS controls colors, spacing, layout and the visual style of the website.</p>
+            </article>
+            <article class="card">
+                <h2>Responsive Design</h2>
+                <p>The grid uses two columns from 768px and three columns from 1024px.</p>
+            </article>
+            <section class="card wide">
+                <h2>About This Blog</h2>
+                <p>
+                    The layout uses reusable CSS variables, Flexbox navigation and CSS Grid cards.
+                    Visit the About page to know more.
+                </p>
+                <a class="btn" href="about.html">About Me</a>
+            </section>
+            <section class="card wide">
+                <h2>Contact</h2>
+                <p>If you have a question or feedback, use the contact form.</p>
+                <a class="btn" href="contact.html">Contact Me</a>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">&copy; 2026 My Blog</div>
+    </footer>
+</body>
+</html>

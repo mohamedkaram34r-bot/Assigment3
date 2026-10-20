@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Blog - Component Library</title>
+    <link rel="stylesheet" href="css/Stylesheet.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header">
+        <a class="logo" href="index.html">My Blog</a>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="components.html" aria-current="page">Components</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="data.html">Data</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container" id="main" tabindex="-1">
+        <section class="section">
+            <h1>Component Library</h1>
+            <p class="label">Every style on this page comes from the CSS variables in Stylesheet.css.</p>
+        </section>
+        <section class="section">
+            <h2>Design Tokens</h2>
+            <div class="swatches">
+                <div class="swatch"><i style="background: var(--primary)" aria-hidden="true"></i><code>--primary</code></div>
+                <div class="swatch"><i style="background: var(--bg)" aria-hidden="true"></i><code>--bg</code></div>
+                <div class="swatch"><i style="background: var(--text)" aria-hidden="true"></i><code>--text</code></div>
+            </div>
+        </section>
+        <section class="section">
+            <h2>Buttons</h2>
+            <div class="row">
+                <div><button class="btn" type="button">Default</button><div class="label">default</div></div>
+                <div><button class="btn is-hover" type="button">Hover</button><div class="label">hover</div></div>
+                <div><button class="btn" type="button" disabled>Disabled</button><div class="label">disabled</div></div>
+            </div>
+        </section>
+        <section class="section">
+            <h2>Card</h2>
+            <article class="card component-card">
+                <h3>Card Title</h3>
+                <p>A short description that explains what this card is about.</p>
+                <a class="btn" href="about.html">Read More</a>
+            </article>
+        </section>
+        <section class="section">
+            <h2>Form Elements</h2>
+            <form class="component-form">
+                <div class="field">
+                    <label for="example-name">Name</label>
+                    <input type="text" id="example-name" name="name" autocomplete="name">
+                </div>
+                <div class="field">
+                    <label for="example-email">Email</label>
+                    <input type="email" id="example-email" name="email" autocomplete="email">
+                </div>
+                <div class="field">
+                    <label for="example-topic">Topic</label>
+                    <select id="example-topic" name="topic">
+                        <option value="">Choose a topic</option>
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                    </select>
+                </div>
+                <button class="btn" type="reset">Reset form</button>
+            </form>
+        </section>
+        <section class="section">
+            <h2>Modal Window</h2>
+            <!-- Native HTML commands open and close this modal without JavaScript. -->
+            <button class="btn" type="button" commandfor="example-modal" command="show-modal">Open modal</button>
+            <dialog id="example-modal" aria-labelledby="modal-title" aria-describedby="modal-description">
+                <h3 id="modal-title">Modal Window</h3>
+                <p id="modal-description">This modal uses HTML and CSS without JavaScript.</p>
+                <button class="btn" type="button" commandfor="example-modal" command="close" autofocus>Close modal</button>
+            </dialog>
+        </section>
+        <section class="section">
+            <h2>Alert / Notification</h2>
+            <div class="alert" role="status">
+                <strong>Information:</strong> This is an example notification.
+            </div>
+        </section>
+        <section class="section">
+            <h2>Responsive Table</h2>
+            <div class="table-wrap" role="region" aria-label="Component table example" tabindex="0">
+                <table>
+                    <thead>
+                        <tr><th scope="col">Name</th><th scope="col">Role</th><th scope="col">Email</th><th scope="col">Status</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Ada Lovelace</td><td>Engineer</td><td>ada@example.com</td><td><span class="badge">Active</span></td></tr>
+                        <tr><td>Linus Torvalds</td><td>Maintainer</td><td>linus@example.com</td><td><span class="badge">Active</span></td></tr>
+                        <tr><td>Grace Hopper</td><td>Admiral</td><td>grace@example.com</td><td><span class="badge off">Away</span></td></tr>
+                        <tr><td>Alan Turing</td><td>Researcher</td><td>alan@example.com</td><td><span class="badge">Active</span></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer components-footer">
+        <div class="container">Component Library</div>
+    </footer>
+
+
+</body>
+</html>

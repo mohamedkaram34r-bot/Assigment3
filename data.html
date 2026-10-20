@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Data | My Blog</title>
+    <link rel="stylesheet" href="css/Stylesheet.css">
+    <script src="js/data.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header">
+        <a class="logo" href="index.html">My Blog</a>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="components.html">Components</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="data.html" aria-current="page">Data</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container" id="main" tabindex="-1">
+        <h1>People Data</h1>
+        <p>This table displays sample data from a JavaScript array.</p>
+        <p class="label" id="table-help">
+            Search by name, age, or city. Click the same sort button again to reverse the order.
+        </p>
+        <div class="data-tools">
+            <div class="field">
+                <label for="search">Search people</label>
+                <input type="search" id="search" placeholder="Search name, age, or city" aria-controls="people-table" aria-describedby="table-help" disabled>
+            </div>
+            <div class="actions">
+                <button class="btn sort-button" id="sort-name" type="button" aria-pressed="false" disabled>Sort by name</button>
+                <button class="btn sort-button" id="sort-age" type="button" aria-pressed="false" disabled>Sort by age</button>
+            </div>
+        </div>
+        <p id="table-status" role="status"></p>
+        <div class="table-wrap" role="region" aria-label="People data table" tabindex="0">
+            <table id="people-table">
+                <caption>Sample People</caption>
+                <thead>
+                    <tr><th scope="col" id="name-heading">Name</th><th scope="col" id="age-heading">Age</th><th scope="col">City</th></tr>
+                </thead>
+                <tbody id="people-body"></tbody>
+            </table>
+        </div>
+        <noscript><p>Enable JavaScript to view, search, and sort the table.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">&copy; 2026 My Blog</div>
+    </footer>
+</body>
+</html>
